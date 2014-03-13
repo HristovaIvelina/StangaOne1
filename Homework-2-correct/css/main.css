@@ -1,0 +1,818 @@
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+a, div, html, body, header, span, p, img, h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    background-color:   #e7e7e7;
+}
+
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+
+/* -------------------------------TOP BAR----------------------------------- */
+
+#top-bar{
+  width: 300px;
+  margin: 0 auto;
+  background-color: #767676
+}
+
+
+.right-floated-fixed a{
+  color: #fff;
+  text-align: center;
+  height: 22px;
+  width: 29px;
+  margin: 0 auto;
+  background-color: #4e9db1;
+  position: fixed;
+  top: 0;
+  right: 21%;
+}
+
+    .right-floated-fixed a:before {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 0;
+      top: 100%;
+      left: 0px;
+      border-top: 6px solid #4e9db1;
+      border-right: 14px solid transparent;
+    }
+
+    .right-floated-fixed a:after {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 0;
+      top: 100%;
+      right: 0px;
+      border-top: 6px solid #4e9db1;
+      border-left: 14px solid transparent;
+    }
+
+        .right-floated-fixed a img{
+            padding-bottom: 5px;
+            padding-top: 3px;
+        }
+
+.pull-container a{
+    position: fixed;
+    right: 24%;
+    top: 6px;
+    text-decoration: none;
+    color: #c5c5c5;
+    text-transform: lowercase;
+    font: italic 12px Arial, sans-serif;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+.content {
+    display: none;
+}
+
+
+
+/* -----------------------------Upper Heading------------------------------- */
+   
+.upper-heading{
+    min-height:0;
+    _zoom: 1;
+    margin-top: 60px;
+}
+
+    .upper-heading:after{
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+#main-navigation{
+    float: left;
+}
+
+    #main-navigation > a {
+        font: 13px "Myriad Pro", Arial, sans-serif;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding-left: 15px;
+        padding-right: 23px;
+        color: #767676;
+        border-right: 1px solid #c1c1c1;
+        text-shadow: 1px 1px #f4f4f4;
+    }
+
+        #main-navigation > a:after, .additional-heading > a:after{
+            content: '';
+            position: relative;
+            right: -7px;
+            top:10px;
+            height: 0;
+            width: 0;
+            border-style: solid;
+            border-width: 4px 4px 0 4px;
+            border-color: #767676 transparent transparent transparent;
+        }
+
+        #main-navigation > a.current {
+            border-radius: 5px;
+            padding: 3px;
+            padding-left: 9px;
+            padding-right: 13px;
+            color: #fff;
+            text-shadow: none;
+            background: #4fa0b5; /* Old browsers */
+            background: -moz-linear-gradient(top,  #4fa0b5 0%, #468899 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4fa0b5), color-stop(100%,#468899)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #4fa0b5 0%,#468899 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #4fa0b5 0%,#468899 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #4fa0b5 0%,#468899 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #4fa0b5 0%,#468899 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4fa0b5', endColorstr='#468899',GradientType=0 ); /* IE6-9 */
+            position: relative;
+        }
+
+        #main-navigation > a.current:before {
+            content: " ";
+            width: 100%;
+            height: 100%;
+            background-image: url('../img/square-pattern.png');
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+            #main-navigation > a.current:after {
+                border-color: #fff transparent transparent transparent;
+            }
+
+        #main-navigation > a:first-of-type {
+            margin-left: 0;
+        }
+
+ 
+header{
+    width: 780px;
+    margin: 0 auto;
+}
+
+    header form {
+        float: right;
+    }
+
+        .input {
+            width: 195px;
+            border-radius: 20px;
+            border-top: 1px solid #cacaca;
+            border-left: 1px solid #cacaca;
+            padding: 1px;
+            padding-left: 5px;
+            font: italic 13px Arial, sans-serif;
+            color: #bcbcbc;
+        }
+
+        .search-button{
+            width: 20px;
+            height: 20px;
+            border: none;
+            position: absolute;
+            right: 284px;
+            margin-top: 5px;
+            background: transparent url("../img/search.png") no-repeat center top;
+            cursor: pointer;
+        }
+
+
+
+
+/* -----------------------------Dropdown Nav------------------------------- */
+
+#main-navigation div {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    display: none;
+}
+
+#main-navigation a:hover > div {
+    display: block;
+}
+
+#main-navigation div:after {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/square-pattern.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#main-navigation a:hover > div {
+    display: block;
+}
+
+.dropdown-menu-wrap {
+    width: 405px;
+    background-color: #47899b;
+    min-height:0;
+    _zoom: 1;
+}
+
+    .dropdown-menu-wrap:after{
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+.dropdown-menu-wrap ul {
+    float: left;
+}
+
+    .dropdown-menu-wrap ul li{
+        list-style-type: none;
+        border-bottom: 1px solid #407c8c;
+        border-top: 1px solid #5894a4;
+        color: #fff;
+        font: 14px/30px "Myriad Pro", Arial, sans-serif;
+        text-transform: uppercase;
+    }
+
+    .dropdown-menu-wrap ul li:hover{
+        color:#124452;
+    }
+
+    .dropdown-menu-wrap ul li:first-child {
+        border-top: none;
+    }
+
+    .dropdown-menu-wrap ul li:last-child {
+        border-bottom: none;
+    }
+
+        .dropdown-menu-wrap ul a {
+            text-decoration: none;
+            
+        }
+
+    .right-col-nav {
+        margin-left: 10px;
+    }
+
+
+
+
+/* -----------------------------Sub Heading------------------------------- */
+
+
+#top-bar{
+    width: 780px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+
+#logo {
+    text-decoration: none;
+    font: italic 13px Arial, sans-serif;
+    text-shadow: 1px 1px #f4f4f4;
+    text-transform: capitalize;
+    color: #c3c3c3;
+    float: left;
+}
+
+    #logo span{
+        font: 75px "Myriad Pro", Arial, sans-serif;
+        color: #fff;
+        text-shadow:2px 2px #cacaca;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+.heading-holder{
+    min-height:0;
+    _zoom: 1;
+}
+
+    .heading-holder:after{
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+.sub-heading{
+    min-height:0;
+        _zoom: 1;
+        margin-bottom: 20px;
+}
+
+    .sub-heading:after{
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+        .sub-heading h1{
+            border-radius: 5px;
+            padding: 3px;
+            padding-left: 9px;
+            padding-right: 9px;
+            margin-left: 30px;
+            margin-top: 25px;
+            float: left;
+            
+            background: #4fa0b5; /* Old browsers */
+            background: -moz-linear-gradient(top,  #4fa0b5 0%, #468899 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4fa0b5), color-stop(100%,#468899)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #4fa0b5 0%,#468899 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #4fa0b5 0%,#468899 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #4fa0b5 0%,#468899 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #4fa0b5 0%,#468899 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4fa0b5', endColorstr='#468899',GradientType=0 ); /* IE6-9 */
+            position: relative;
+            z-index: -1;
+        }
+
+        .sub-heading h1:before{
+            content: " ";
+            width: 100%;
+            height: 100%;
+            background-image: url('../img/square-pattern.png');
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .sub-heading span {
+            color: #fff;
+            text-transform: uppercase;
+            font: bold 29px "Myriad Pro", Arial, sans-serif;
+            z-index: 2;
+        }
+
+
+
+    .sub-heading nav a {
+        font: 14px "Myriad Pro", Arial, sans-serif;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding-left: 15px;
+        padding-right: 23px;
+        color: #5e9aa9;
+        border-left: 1px solid #c1c1c1;
+        text-shadow: 1px 1px #f4f4f4;
+    }
+
+        .sub-heading nav a.current {
+            border-radius: 5px;
+            border: 1px solid #bdbdbd;
+            padding: 3px;
+            padding-left: 9px;
+            padding-right: 13px;
+            margin-right: 0;
+            color: #767676;
+        }
+
+.additional-heading {
+    position: relative;
+    left: 212px;
+    top: -20px;
+}
+
+.sub-heading-wrap{
+    float: left;
+    width: 550px;
+}
+
+.rating-box{
+    float: right;
+    border: 1px solid #d4d4d4;
+    width: 110px;
+    margin: 20px auto 0;
+    color: #acacac;
+}
+
+
+    .first-row {
+        font: bold 28px "Myriad Pro", Arial, sans-serif;
+        color: #448697;
+        border-bottom: 1px solid #d3d3d3;
+        width: 88px;
+        text-align: center;
+        margin-left: 11px;
+    }
+
+        .first-row:before {
+            content: " ";
+            width: 100%;
+            height: 100%;
+            content: url('../img/star.png');
+            position: relative;
+            left: -6px;
+        }
+
+        .first-row span {
+        font: 15px "Myriad Pro", Arial, sans-serif;
+        color: #acacac;
+        }
+
+    .second-row {
+        font: 11px "Myriad Pro", Arial, sans-serif;
+        text-transform: uppercase;
+        margin-left: 22px;
+        margin-top: 10px;
+        text-shadow: 1px 1px #f3f3f3;
+    }
+
+    .third-row {
+        font: 15px "Myriad Pro", Arial, sans-serif;
+        width: 35px;
+        background-color: #e7e7e7;
+        margin-left: 32px;
+        text-shadow: 1px 1px #f3f3f3;
+        position: relative;
+        top: -10px;
+        padding-left: 5px;
+
+    }
+
+    .special-effect {
+        height: 8px;
+        width: 88px;
+        margin-left: 10px;
+        border-bottom: 1px solid #cacaca;
+    }
+
+
+
+
+
+
+
+/* ==========================================================================
+   CONTENT
+   ========================================================================== */
+
+
+#content {
+    width: 780px;
+    margin: 0 auto;
+}
+
+/*
+    Only for testing
+*/
+
+.grid-gallery {
+    overflow: hidden;
+}
+
+.fixed-size-1 {
+    width: 390px;
+    height: 260px;
+    overflow: hidden;
+    float: left;
+}
+
+.grid-box {
+    margin: 0 2px 2px 0;
+    float: left;
+
+    width: 63px;
+    height: 63px;
+
+    background: url('../img/grid-small-img.jpg');
+}
+
+
+.span-2 {
+    width: 128px;
+    background-image: url('../img/grid-two-row-image.jpg');
+}
+
+.span-3 {
+    width: 193px;
+    background-image: url('../img/grid-three-row-image.jpg');
+}
+
+
+.span-height-2 {
+    height: 128px;
+    background-image: url('../img/grid-big-img.jpg');
+}
+
+.span-height-3 {
+    height: 193px;
+    background-image: url('../img/grid-big-img.jpg');
+}
+
+
+
+
+/* ------------------------------Bottom Part-------------------------------- */
+
+
+.user-rating-box span{
+    font: 14px/50px "Myriad Pro", Arial, sans-serif;
+    text-shadow: 1px 1px #f4f4f4;
+    color: #767676;
+    text-transform: uppercase;
+    margin-right: 8px;
+}
+    
+    .user-rating-box img {
+        padding-left: -5px;
+        position: relative;
+        top: -2px;
+    }
+
+.movie-info {
+    margin-bottom: 105px;
+}
+
+.info-row {
+    min-height:0;
+    _zoom: 1;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+    .info-row:after{
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+    .info-row span {
+        float: left;
+        font: 21px/45px "Myriad Pro", Arial, sans-serif;
+        color: #767676;
+        text-transform: uppercase;
+        text-shadow: 1px 1px #f4f4f4;
+    }
+
+    .info-row a {
+        float: right;
+        font: 9px/45px Arial, sans-serif;
+        color: #a7a7a7;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-shadow: 1px 1px #f4f4f4;
+        padding-right: 35px;
+    }
+
+    .info-row a:after {
+            content: '';
+            position: relative;
+            right: -7px;
+            top:10px;
+            height: 0;
+            width: 0;
+            border-style: solid;
+            border-width: 4px 4px 0 4px;
+            border-color: #767676 transparent transparent transparent;
+        }
+
+        
+
+    .info-row .image-wrapper {
+        padding-left: 100px;
+        height: 0;
+    }
+
+        .info-row img{
+            position: relative;
+            top: 10px;
+            margin-left: 5px;
+        }
+
+
+
+
+
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+#footer{
+    background-color: #fff;
+    height: 100%;
+}
+
+    #footer-wrapper{
+        width: 820px;
+        margin: 0 auto;
+        padding-top: 45px;
+        overflow: hidden;
+        padding-bottom: 50px;
+    }
+
+    #footer .logo {
+        font: bold 75px/50px "Myriad Pro", Arial, sans-serif;
+        color: #cacaca;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-bottom: 1px solid #f2f2f2;
+        padding-bottom: 20px;
+        margin-right: 40px;
+        padding-left: 20px;
+    }
+
+    #footer .column {
+        float: left;
+        width: 30%;
+    }
+
+        #footer .column:first-child {
+            text-align: right;
+            margin-right: 20px;
+            
+        }
+
+            #footer .column:first-child p {
+                margin-top: 50px;
+                font: italic 11px/20px Georgia, serif;
+                color: #a7a7a7;
+                padding-right: 50px;
+            }
+
+        #footer .column h1 {
+            font: normal 10px Arial, sans-serif;
+            text-transform: uppercase;
+            color: #9c9c9c;
+        }
+
+        .feed-text {
+            font: bold 12px/20px Arial, sans-serif;
+            padding-bottom: 15px;
+            padding-top: 15px;
+            border-bottom: 1px solid #f2f2f2;
+
+        }
+
+        .feed-text span {
+            display: block;
+            font: italic 11px/20px Georgia, serif;
+            color: #9c9c9c;
+        }
+
+    .middle-column {
+        margin-right: 50px;
+    }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+    #footer a {
+        text-decoration: none;
+        color: #478c9d;
+        text-align: right;
+    }
+
+        #footer a img {
+            margin-top: 10px;
+        }
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

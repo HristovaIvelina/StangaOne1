@@ -1,0 +1,235 @@
+a, div, html, body, header, span, p, img, h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+
+
+.pop-up-window{
+    position: absolute;
+    top: -500px;
+    left: 0;
+    right: 0;
+	background-color: #1c1c1c;
+	color: #d4d4d4;
+	overflow: hidden;
+}
+
+.top-part {
+	width: 780px;
+    margin: 0 auto;
+    min-height:0;
+}
+
+.top-part:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+/* -----------------------------Left Column------------------------------- */
+
+	.left-col {
+		width: 345px;
+		float: left;
+		margin-top: 40px;
+	}
+
+		.pop-up-header {
+			min-height:0;
+		    margin-bottom: 20px;
+		}
+
+				.pop-up-header:after{
+				    content: "";
+				    clear: both;
+				    display: block;
+				}
+
+
+			.pop-up-header .left-heading{
+				float: left;
+				text-transform: uppercase;
+				font: bold 14px "Myriad Pro", Arial, sans-serif;
+			}
+
+			.pop-up-header .right-heading{
+				float: right;
+				text-transform: uppercase;
+				font: 10px "Myriad Pro", Arial, sans-serif;
+			}
+
+		.floated-row {
+			min-height:0;
+		    padding-bottom: 25px;
+		    padding-top: 25px;
+		    border-top: 1px solid #454545;
+		}
+
+				.floated-row:after{
+				    content: "";
+				    clear: both;
+				    display: block;
+				}
+
+
+
+.first-row {
+	padding-top: 0;
+    border-top: none;
+}
+
+.pop-up-window .first-row:before {
+    content: '';
+    width: 0;
+    height: 0;
+}
+
+			.floated-row img {
+				float: left;
+				width: 63px;
+			}
+
+			.floated-row div {
+				float: right;
+				width: 250px;
+				font: bold 12px Arial, sans-serif;
+			}
+
+				.floated-row div span {
+					font: italic 11px Georgia, serif;
+					color: #919191;
+					margin-left: 10px;
+				}
+
+				.floated-row span:first-child {
+					margin-left: 0;
+				}
+
+				.floated-row span:first-child:after {
+					content: " \25CF";
+				    font-size: 6px;
+				    margin-left: 10px;
+				    position: relative;
+				    top: -1px;
+				}
+
+
+
+/* -----------------------------Right Column------------------------------- */
+
+.right-col {
+		width: 301px;
+		float: left;
+		margin-left: 130px;
+		margin-top: 40px;
+	}
+
+.right-col .floated-row img {
+
+	width: 24px;
+}
+
+.right-col .floated-row {
+			padding-bottom: 13px;
+		    padding-top: 13px;
+		    border-top: 1px solid #454545;
+		}
+
+			.right-col .first-row {
+				padding-top: 0;
+			    border-top: none;
+			}
+
+.right-col p {
+	font-weight: normal;
+}
+
+.pop-up-window a {
+	text-decoration: none;
+	color: #89c4d3;
+}
+
+
+/* -----------------------------Footer------------------------------- */
+
+.pop-up-window footer {
+	background-color: #488c9e;
+
+}
+
+.bottom-nav {
+	width: 780px;
+    margin: 0 auto;
+    padding: 15px 0;
+    overflow: hidden;
+}
+
+.bottom-nav a {
+    color: #fff;
+    text-transform: uppercase;
+    font: 13px "Myriad Pro", Arial, sans-serif;
+    padding: 5px 15px;
+    border-left: 1px solid #6fabba;
+    border-right: 1px solid #3b7685;
+}
+
+.bottom-nav a:first-child {
+    border-left: none;
+}
+
+.bottom-nav a:last-child {
+    border-right: none;
+}
+
+.bottom-nav .first-nav a:last-child {
+    position: relative;
+}
+
+.bottom-nav .first-nav a:last-child:after {
+    content: "6";
+    background-color: #2b6776;
+    position: absolute;
+    top: 5px;
+    right: -10px;
+    height: 16px;
+    width: 16px;
+    border-radius: 8px;
+    text-align: center;
+    font: 8px/16px Arial, sans-serif;
+
+}
+
+.bottom-nav div {
+	float: left;
+}
+
+.second-nav {
+	margin-left: 40px;
+}
+
+.your-basket {
+	color: #fff;
+	text-transform: uppercase;
+    font: 13px "Myriad Pro", Arial, sans-serif;
+    margin-left: 200px;
+    text-align: right;
+}
+
+.footer-small-text{
+	font: 9px Arial, sans-serif;
+	padding-top: 2px;
+}
+
+.your-basket:before {
+	content: " ";
+	height: 26px;
+	width: 26px;
+    background: url('../img/basket-icon.png') no-repeat center top;
+    position: absolute;
+
+}
+
